@@ -17,6 +17,7 @@
 		CE09EDD2285B7EF800F10250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE09EDD1285B7EF800F10250 /* LaunchScreen.storyboard */; };
 		CE5A798D285E3FB70021AC77 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A798C285E3FB70021AC77 /* QuestionTests.swift */; };
 		CE5A798F285E3FE90021AC77 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A798E285E3FE90021AC77 /* Question.swift */; };
+		CE5C8D1A285F685E0026AFB2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C8D19285F685E0026AFB2 /* Quiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CE09EDD1285B7EF800F10250 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../../../../../.Trash/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE5A798C285E3FB70021AC77 /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
 		CE5A798E285E3FE90021AC77 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		CE5C8D19285F685E0026AFB2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5A798E285E3FE90021AC77 /* Question.swift */,
+				CE5C8D19285F685E0026AFB2 /* Quiz.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE09EDA6285B7C1800F10250 /* ViewController.swift in Sources */,
+				CE5C8D1A285F685E0026AFB2 /* Quiz.swift in Sources */,
 				CE5A798F285E3FE90021AC77 /* Question.swift in Sources */,
 				CE09EDA2285B7C1800F10250 /* AppDelegate.swift in Sources */,
 				CE09EDA4285B7C1800F10250 /* SceneDelegate.swift in Sources */,

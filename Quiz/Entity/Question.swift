@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Question: Codable {
+struct Question: Codable, Equatable {
     struct Choice: Codable, Equatable {
         let answer: String
         let correct: Bool
