@@ -22,6 +22,7 @@
 		CE368C322860CF4800D5F334 /* GameAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE368C312860CF4800D5F334 /* GameAssembler.swift */; };
 		CE368C342860DB8600D5F334 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE368C332860DB8600D5F334 /* QuestionView.swift */; };
 		CE368C362860DBB000D5F334 /* ImageLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE368C352860DBB000D5F334 /* ImageLabelView.swift */; };
+		CE368C382862207900D5F334 /* AnswersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE368C372862207900D5F334 /* AnswersView.swift */; };
 		CE5A798D285E3FB70021AC77 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A798C285E3FB70021AC77 /* QuestionTests.swift */; };
 		CE5A798F285E3FE90021AC77 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A798E285E3FE90021AC77 /* Question.swift */; };
 		CE5C8D1A285F685E0026AFB2 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C8D19285F685E0026AFB2 /* Quiz.swift */; };
@@ -67,6 +68,7 @@
 		CE368C312860CF4800D5F334 /* GameAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssembler.swift; sourceTree = "<group>"; };
 		CE368C332860DB8600D5F334 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		CE368C352860DBB000D5F334 /* ImageLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelView.swift; sourceTree = "<group>"; };
+		CE368C372862207900D5F334 /* AnswersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersView.swift; sourceTree = "<group>"; };
 		CE5A798C285E3FB70021AC77 /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
 		CE5A798E285E3FE90021AC77 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CE5C8D19285F685E0026AFB2 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				CE368C2928608A3F00D5F334 /* GameViewController.swift */,
 				CE368C332860DB8600D5F334 /* QuestionView.swift */,
 				CE368C352860DBB000D5F334 /* ImageLabelView.swift */,
+				CE368C372862207900D5F334 /* AnswersView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,10 +182,10 @@
 		CE5C8D1B285F6C3A0026AFB2 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				CE368C312860CF4800D5F334 /* GameAssembler.swift */,
+				CE368C2F28608ACD00D5F334 /* GameProtocols.swift */,
 				CE5C8D1C285F6C550026AFB2 /* Game.swift */,
 				CE368C2B28608A7400D5F334 /* QuizLoader.swift */,
-				CE368C2F28608ACD00D5F334 /* GameProtocols.swift */,
-				CE368C312860CF4800D5F334 /* GameAssembler.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				CE09EDA6285B7C1800F10250 /* StartViewController.swift in Sources */,
 				CE5C8D1D285F6C550026AFB2 /* Game.swift in Sources */,
 				CE368C362860DBB000D5F334 /* ImageLabelView.swift in Sources */,
+				CE368C382862207900D5F334 /* AnswersView.swift in Sources */,
 				CE5C8D1A285F685E0026AFB2 /* Quiz.swift in Sources */,
 				CE5A798F285E3FE90021AC77 /* Question.swift in Sources */,
 				CE368C2A28608A3F00D5F334 /* GameViewController.swift in Sources */,
@@ -498,7 +502,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,7 +531,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

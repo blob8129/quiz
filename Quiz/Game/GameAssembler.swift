@@ -9,6 +9,6 @@ import UIKit
 
 final class GameAssembler {
     func assemble() -> UIViewController {
-        return GameViewController()
+        return GameViewController(game: Game(loader: QuizLoader(source: .local(localGameDate))))
     }
 }

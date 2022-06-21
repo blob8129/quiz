@@ -60,6 +60,8 @@ extension Game.State {
                     return .ended(quiz, answers)
                 }
                 return .inProgress(quiz, index: nextIndex, .question, answers)
+            case .ended(let quiz, _):
+                return .inProgress(quiz, index: 0, .question, [])
             default:
                 return self
             }

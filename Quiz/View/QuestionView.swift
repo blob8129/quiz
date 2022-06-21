@@ -30,9 +30,8 @@ final class QuestionView: UIView {
         return lbl
     }(UILabel())
     
-    private lazy var imageView: UIImageView = { imv in
+    lazy var imageView: UIImageView = { imv in
         imv.translatesAutoresizingMaskIntoConstraints = false
-        imv.image = UIImage(named: "Sample")
         imv.contentMode = .scaleAspectFit
         imv.layer.cornerRadius = 4
         return imv
@@ -44,7 +43,7 @@ final class QuestionView: UIView {
         lbl.layer.cornerRadius = 4
         lbl.backgroundColor = .white
         lbl.textColor = .black
-        lbl.text = "What is the capital of France?"
+        lbl.numberOfLines = 0
         return lbl
     }(UILabel())
     
@@ -63,13 +62,20 @@ final class QuestionView: UIView {
         addSubview(quizTitleLabel)
         addSubview(resultView)
         addSubview(imageView)
-        addSubview(questionLabel)
         
+        let questionContainer = UIView()
+        questionContainer.translatesAutoresizingMaskIntoConstraints = false
+        questionContainer.backgroundColor = .white
+        questionContainer.layer.cornerRadius = 4
+        
+        questionContainer.addSubview(questionLabel)
+        addSubview(questionContainer)
+
         resultView.addSubview(resultLabel)
         
         NSLayoutConstraint.activate([
             resultView.leftAnchor.constraint(equalTo: leftAnchor),
-            resultView.topAnchor.constraint(equalTo: topAnchor),
+            resultView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             rightAnchor.constraint(equalTo: resultView.rightAnchor),
             
             resultLabel.leftAnchor.constraint(equalTo: resultView.leftAnchor),
@@ -85,14 +91,18 @@ final class QuestionView: UIView {
             quizTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             
             imageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-            imageView.topAnchor.constraint(equalTo: resultView.bottomAnchor, constant: 16),
+            imageView.topAnchor.constraint(equalTo: resultView.bottomAnchor),
             rightAnchor.constraint(equalTo: imageView.rightAnchor, constant: 16),
-            imageView.bottomAnchor.constraint(equalTo: questionLabel.topAnchor, constant: 16),
+            questionContainer.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
             
-            questionLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-            rightAnchor.constraint(equalTo: questionLabel.rightAnchor, constant: 16),
-            bottomAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 16)
+            questionContainer.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
+            rightAnchor.constraint(equalTo: questionContainer.rightAnchor, constant: 8),
+            bottomAnchor.constraint(equalTo: questionContainer.bottomAnchor),
+            
+            questionLabel.leftAnchor.constraint(equalTo: questionContainer.leftAnchor, constant: 8),
+            questionLabel.topAnchor.constraint(equalTo: questionContainer.topAnchor, constant: 8),
+            questionContainer.rightAnchor.constraint(equalTo: questionLabel.rightAnchor, constant: 8),
+            questionContainer.bottomAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 8)
         ])
     }
 }
-

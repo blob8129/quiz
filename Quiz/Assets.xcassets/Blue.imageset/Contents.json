@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "filename" : "Blue.svg",
+      "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 0,
+          "left" : 44,
+          "right" : 8,
+          "top" : 44
+        },
+        "center" : {
+          "height" : 0,
+          "mode" : "stretch",
+          "width" : 0
+        },
+        "mode" : "9-part"
+      }
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
