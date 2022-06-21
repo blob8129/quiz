@@ -130,7 +130,7 @@ class GameTests: XCTestCase {
         
         game.$viewState.dropFirst(2).sink { state in
             if case .ended(let score) = state {
-                XCTAssertEqual(score, 0)
+                XCTAssertEqual(score, 3)
             } else {
                 XCTFail()
             }

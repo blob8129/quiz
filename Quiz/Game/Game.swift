@@ -29,8 +29,11 @@ extension Game.State {
                                index: index,
                                total: quiz.questions.count,
                                selected: selected)
-        case .ended(let quiz, let answers):
-            return .ended(score: 0)
+        case .ended(_, let answers):
+            let score = answers.reduce(0) { partialResult, answer in
+                answer.selected.correct ? partialResult + 1 : partialResult
+            }
+            return .ended(score: score)
         case .error(_):
             return .error
         }
