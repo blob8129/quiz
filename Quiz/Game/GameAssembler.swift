@@ -9,6 +9,8 @@ import UIKit
 
 final class GameAssembler {
     func assemble() -> UIViewController {
-        return GameViewController(game: Game(loader: QuizLoader(source: .local(localGameDate))))
+        let url = URL(string: "https://create.kahoot.it/rest/kahoots/fb4054fc-6a71-463e-88cd-243876715bc1")!
+        let loader = QuizLoader(source: .network(url))
+        return GameViewController(game: Game(loader: loader))
     }
 }

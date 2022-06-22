@@ -23,8 +23,8 @@ final class QuizLoader {
         }
         switch firstSource {
         case .network(let url):
-            print(url)
-            return nil
+            let (data, _) = try await URLSession.shared.data(from: url)
+            return try decoder.decode(Quiz.self, from: data)
         case .local(let data):
             return try decoder.decode(Quiz.self, from: data)
         }

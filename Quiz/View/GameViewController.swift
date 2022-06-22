@@ -67,9 +67,13 @@ final class GameViewController: UIViewController, GameView, AnswersViewDelegate 
         navigationController?.isNavigationBarHidden = true
         addAllSubviews()
         
-        game.$viewState.sink { [weak self] state in
-            self?.render(state)
-        }.store(in: &allCancellables)
+        game
+            .$viewState
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                self?.render(state)
+            }
+            .store(in: &allCancellables)
         
         Task {
             await game.start()
