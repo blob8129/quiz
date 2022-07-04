@@ -7,7 +7,7 @@
 
 import Foundation
 
-let localGameDate =
+let localGameData =
 #"""
 {
     "uuid": "fb4054fc-6a71-463e-88cd-243876715bc1",

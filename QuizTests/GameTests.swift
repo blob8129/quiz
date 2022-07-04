@@ -34,7 +34,7 @@ class GameTests: XCTestCase {
     }
     
     func testGameFirstQuestion() async throws {
-        let game = Game(loader: QuizLoader(source: .local(localGameDate)))
+        let game = Game(loader: QuizLoader(source: .local(localGameData)))
         
         game.$viewState.dropFirst().sink { state in
             if case .inProgress(let question,
@@ -54,7 +54,7 @@ class GameTests: XCTestCase {
     }
     
     func testGameFirstQuestionAnswer0() async throws {
-        let game = Game(loader: QuizLoader(source: .local(localGameDate)))
+        let game = Game(loader: QuizLoader(source: .local(localGameData)))
         
         game.$viewState.dropFirst(2).sink { state in
             if case .inProgress(let question,
@@ -76,7 +76,7 @@ class GameTests: XCTestCase {
     }
     
     func testGameFirstQuestionAnswer1() async throws {
-        let game = Game(loader: QuizLoader(source: .local(localGameDate)))
+        let game = Game(loader: QuizLoader(source: .local(localGameData)))
         
         game.$viewState.dropFirst(2).sink { state in
             if case .inProgress(let question,
@@ -98,7 +98,7 @@ class GameTests: XCTestCase {
     }
     
     func testGameFirstQuestionNextQuestion() async throws {
-        let game = Game(loader: QuizLoader(source: .local(localGameDate)))
+        let game = Game(loader: QuizLoader(source: .local(localGameData)))
         
         game.$viewState.dropFirst(3).sink { state in
             if case .inProgress(let question,
@@ -120,7 +120,7 @@ class GameTests: XCTestCase {
     }
     
     func testAllQuestionsGameEnded() async throws {
-        let game = Game(loader: QuizLoader(source: .local(localGameDate)))
+        let game = Game(loader: QuizLoader(source: .local(localGameData)))
         
         await game.start()
         (0..<11).forEach {
