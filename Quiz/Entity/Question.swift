@@ -14,7 +14,7 @@ struct Question: Codable, Equatable {
     }
     let question: String
     let time: Int
-    let points: Bool
+    let points: Bool?
     let pointsMultiplier: Int
     let image: URL
     let choices: [Choice]

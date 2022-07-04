@@ -106,7 +106,7 @@ final class Game {
             state = .inProgress(quiz, index: 0, .question, [])
         } catch {
             // TODO: Handle error
-            print(error.localizedDescription)
+            print(error)
         }
     }
     
